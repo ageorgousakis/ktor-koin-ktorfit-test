@@ -1,4 +1,4 @@
-package test
+package example
 
 import de.jensklingenberg.ktorfit.ktorfit
 import io.ktor.client.*
@@ -9,7 +9,7 @@ import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 import org.koin.dsl.module
-import test.client.TestClient
+import example.client.TestClient
 
 fun clientsModule() = module {
 

@@ -1,6 +1,4 @@
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
     application
@@ -11,11 +9,11 @@ plugins {
     alias(libs.plugins.ktorfit)
 }
 
-group = "test"
+group = "example"
 version = "0.0.1"
 
 application {
-    mainClass.set("test.ApplicationKt")
+    mainClass.set("example.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
@@ -55,10 +53,6 @@ tasks {
 //        }
 //    }
 
-    withType<Test> {
-        useJUnitPlatform()
-    }
-
     java {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -79,33 +73,9 @@ dependencies {
 
     implementation(libs.bundles.ktor.koin)
 
-//    implementation(libs.bundles.ktor.arrow)
-
-//    implementation(libs.hoplite.core)
-//    implementation(libs.hoplite.yaml)
-
-//    implementation(libs.bundles.tegral.openapi)
-
-//    implementation(libs.mongodb.driver)
-
-//    implementation(libs.bson.kotlinx)
-//    implementation(libs.ks3.jdk)
-//    implementation(libs.kotlinx.datetime)
-
-//    implementation(libs.bundles.cohort)
-//    implementation(libs.cohort.kafka)
-//    implementation(libs.cohort.lettuce)
-
     implementation(libs.logback.classic)
-//    implementation(libs.kotlin.logging)
-
-//    implementation(libs.ktor.i18n)
-
-//    implementation(libs.kotlin.kafka)
 
     implementation(libs.ktorfit.light)
-
-//    implementation(libs.lettuce)
 
     ksp(libs.ktorfit.ksp)
     ksp(libs.koin.ksp.compiler)

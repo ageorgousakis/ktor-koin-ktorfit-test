@@ -1,4 +1,4 @@
-package test
+package example
 
 import io.ktor.client.call.*
 import io.ktor.client.plugins.*
@@ -8,7 +8,7 @@ import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.testing.*
 import kotlinx.serialization.json.Json
-import test.client.Person
+import example.client.Person
 import kotlin.test.*
 
 class ApplicationTest {

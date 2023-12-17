@@ -1,4 +1,4 @@
-package test.client
+package example.client
 
 @kotlinx.serialization.Serializable
 data class Person(

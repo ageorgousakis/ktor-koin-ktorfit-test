@@ -1,4 +1,4 @@
-package test.client
+package example.client
 
 import de.jensklingenberg.ktorfit.http.GET
 import de.jensklingenberg.ktorfit.http.Path
